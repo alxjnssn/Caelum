@@ -1,0 +1,181 @@
+@import "setup"; /* normalize clearfix border-box*/
+
+$brandAccent: #f7c212;
+$liteGrey: #b9b9b9;
+$almostBlack: #00001a;
+$backgroundGrey: #f5f5f5;
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+
+h1, h2, h3, h4 {
+	margin: 0;
+}
+
+p {
+	font-size: .85em;
+}
+
+header {
+	height: 100px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: white;
+	.logo-company-name {
+		padding-top: 20px;
+		display: flex;
+		width: 10%;
+		img, h3 {
+			display: inline-block;
+		}
+		img {
+			width: calc(49px * 0.8);
+			height: calc(45px * 0.8);
+			margin: auto;
+		}
+		h3 {
+			margin: auto;
+			margin-left: 5px;
+			color: $brandAccent;
+			letter-spacing: 2px;
+		}
+	}
+	nav {
+		padding-top: 20px;
+		height: 100px;
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+	}
+	ul {
+		list-style: none;
+		width: 80%;
+		display: flex;
+		justify-content: space-between;
+		a {
+			border: none;
+			margin: auto;
+			text-decoration: none;
+			color: $liteGrey;
+			:hover {
+				color: $brandAccent;
+				transition: color 0.5s ease;;
+			}
+		}
+		li {
+			display: inline-block;
+			font-size: .85em;
+			letter-spacing: 2px;
+		}
+	}
+}
+
+.hero-img {
+	text-align: center;
+	img {
+		width: 80%;
+		margin: auto;
+		padding: 55px;
+	}
+}
+
+.hero-contents {
+	width: 100%;
+	text-align: center;
+	h2 {
+		color: $almostBlack;
+		margin-bottom: 20px;
+	}
+	h3 {
+		color: $liteGrey;
+		font-size: 0.95em;
+		margin-bottom: 30px;
+	}
+}
+
+.search-box {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 100px;
+	input {
+		width: 510px;
+		height: 45px;
+		padding-left: 25px;
+	}
+	label {
+		position: relative;
+		right: 50px;
+		cursor: pointer;
+		i {
+			color: $brandAccent;
+		}
+		i:hover {
+			color: $almostBlack;
+		}
+	}
+}
+
+.skills-edu {
+	width: 100%;
+	height: 200px;
+	display: flex;
+	.skills-blurb {
+		background-color: $brandAccent;
+		width: 350px;
+		padding: 30px;
+		h3 {
+			color: $almostBlack;
+		}
+		p {
+			color: white;
+			line-height: 25px;
+		}
+	}
+	.skills-type {
+		background-color: $backgroundGrey;
+		width: calc(100% - 350px);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		h3 {
+			font-size: .85em;
+		}
+		.flickity-page-dots {
+			position: absolute;
+			left: 0px;
+			bottom: 0px;
+			width: 150px;
+			padding: 10px 15px;
+			background-color: $almostBlack;
+			.dot {
+				background-color: $liteGrey;
+			}
+			.is-selected {
+				background-color: $brandAccent;
+			}
+		}
+		.flickity-viewport {
+			width: 100%;
+		}
+		.carousel-cell {
+			padding: 30px;
+			background-color: $almostBlack;
+			margin: 0 10px;
+			margin-top: 60px;
+			color: white;
+		}
+	}
+}
+
+.flickity-prev-next-button {
+	display: none;
+}
